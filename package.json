@@ -1,6 +1,7 @@
 {
-  "name": "hello-world",
+  "name": "curreny-converter",
   "version": "0.0.0",
+  "author": "Akkas <akkassingh@gmail.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
