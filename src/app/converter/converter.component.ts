@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CurrencyExchangeService } from '../services/exchange-rates.service' 
-import { Key } from 'protractor';
+import {CurrencyExchangeService} from '../services/exchange-rates.service';
+
 
 @Component({
   selector: 'app-converter',
@@ -18,14 +18,16 @@ export class ConverterComponent implements OnInit {
     return this.amount * this.rates[this.to];
   }
 
-  loadRates() {
+  loadRates(){
     this.service.getRates(this.from).subscribe(res => this.rates = res.rates);
   }
-  getAllCurrencies():
-  constructor(
-    private service: CurrencyExchangeService) {
-      
-    }
+
+  getAllCurrencies(): string[]{
+    return Object.keys(this.rates);
+  }
+
+  constructor(private service: CurrencyExchangeService) {
+  }
 
   ngOnInit(): void {
     this.loadRates();

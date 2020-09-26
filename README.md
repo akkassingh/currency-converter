@@ -1,4 +1,4 @@
-# currency Exchanger
+# Currency Exchanger
 
 This project helps you with Exchange currency Rates.
 
